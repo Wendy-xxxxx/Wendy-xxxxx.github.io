@@ -286,6 +286,48 @@
       transform: translateY(-1px);
     }
 
+    .pub-card {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 26px;
+      align-items: center;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      margin-bottom: 24px;
+      background: #ffffff;
+      transition: 0.2s ease;
+    }
+
+    .pub-card:hover {
+      border-color: #bfdbfe;
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.10);
+      transform: translateY(-2px);
+    }
+
+    .pub-img-wrap {
+      width: 100%;
+      height: 210px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .pub-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+    }
+
+    .pub-content {
+      min-width: 0;
+    }
+
     .pub-title {
       font-weight: 800;
       color: #111827;
@@ -304,9 +346,22 @@
       font-style: italic;
     }
 
+    .pub-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pub-link {
+      font-weight: 800;
+      color: #0047ab;
+    }
+
     .pub-note {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 0;
       padding: 4px 10px;
       border-radius: 999px;
       background: #f3f4f6;
@@ -385,6 +440,14 @@
       .nav-links {
         gap: 12px;
       }
+
+      .pub-card {
+        grid-template-columns: 1fr;
+      }
+
+      .pub-img-wrap {
+        height: 220px;
+      }
     }
 
     @media (max-width: 520px) {
@@ -414,6 +477,7 @@
       <a class="nav-name" href="#home">Wenyu Xu</a>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
@@ -449,6 +513,7 @@
           <span class="tag">Vision-Language Reasoning</span>
           <span class="tag">UAV Inspection</span>
           <span class="tag">AR/BIM</span>
+          <span class="tag">PPE Compliance</span>
         </div>
 
         <div class="buttons">
@@ -485,6 +550,27 @@
             more reliable, and more automated construction environments.
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <h2 class="section-title">Education</h2>
+
+      <div class="education-item">
+        <h3>Shenzhen University, China</h3>
+        <div class="education-meta">M.S. in Civil Engineering · 09/2021–06/2024</div>
+        <p>
+          Supervisor: Prof. Yi Tan<br />
+          Average Score: 89.40 · GPA: 3.67/4.0 · Integrated Ranking: 4/134, Top 3%
+        </p>
+      </div>
+
+      <div class="education-item">
+        <h3>Sichuan Normal University, China</h3>
+        <div class="education-meta">B.S. in Construction Costs · 09/2017–07/2021</div>
+        <p>
+          Average Score: 87.44 · GPA: 3.69/4.0 · Integrated Ranking: 2/88, Top 3%
+        </p>
       </div>
     </section>
 
@@ -527,116 +613,172 @@
     <section class="section" id="publications">
       <h2 class="section-title">Selected Publications</h2>
 
-      <div class="pub">
-        <div class="pub-title">
-          Automated UAV-based inspection of unsafe mobile elevated work platform operations using monocular 3D detection
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/autcon2026-uav-mewp.png" alt="UAV-based MEWP inspection">
         </div>
-        <div class="pub-authors">
-          <strong>Wenyu Xu</strong>, Pengteng Lin, Nana Li, Yi Tan, Wen Yi
+        <div class="pub-content">
+          <div class="pub-title">
+            Automated UAV-based inspection of unsafe mobile elevated work platform operations using monocular 3D detection
+          </div>
+          <div class="pub-authors">
+            <strong>Wenyu Xu</strong>, Pengteng Lin, Nana Li, Yi Tan, Wen Yi
+          </div>
+          <div class="pub-venue">
+            Automation in Construction, 187, 106925, 2026
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1016/j.autcon.2026.106925" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q1</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Automation in Construction, 187, 106925, 2026
-        </div>
-        <a href="https://doi.org/10.1016/j.autcon.2026.106925" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q1</span>
       </div>
 
-      <div class="pub">
-        <div class="pub-title">
-          Digital-physical integration for MEP-structural clash coordination using path planning and AR navigation
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/autcon2025-mep-ar.png" alt="MEP-structural clash coordination using AR navigation">
         </div>
-        <div class="pub-authors">
-          <strong>Wenyu Xu</strong>, Penglu Chen, Hung-Lin Chi, Shenghua Wang, Songbai Zhou
+        <div class="pub-content">
+          <div class="pub-title">
+            Digital-physical integration for MEP-structural clash coordination using path planning and AR navigation
+          </div>
+          <div class="pub-authors">
+            <strong>Wenyu Xu</strong>, Penglu Chen, Hung-Lin Chi, Shenghua Wang, Songbai Zhou
+          </div>
+          <div class="pub-venue">
+            Automation in Construction, 179, 106501, 2025
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1016/j.autcon.2025.106501" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q1</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Automation in Construction, 179, 106501, 2025
-        </div>
-        <a href="https://doi.org/10.1016/j.autcon.2025.106501" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q1</span>
       </div>
 
-      <div class="pub">
-        <div class="pub-title">
-          Reducing visual fatigue by optimizing HCI interface and work-rest scheduling using eye tracking in AR-based building defect inspection
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/aei2026-visual-fatigue.png" alt="AR-based visual fatigue paper">
         </div>
-        <div class="pub-authors">
-          <strong>Wenyu Xu</strong>, Keyu Chen, Yi Tan
+        <div class="pub-content">
+          <div class="pub-title">
+            Reducing visual fatigue by optimizing HCI interface and work-rest scheduling using eye tracking in AR-based building defect inspection
+          </div>
+          <div class="pub-authors">
+            <strong>Wenyu Xu</strong>, Keyu Chen, Yi Tan
+          </div>
+          <div class="pub-venue">
+            Advanced Engineering Informatics, 72, 104421, 2026
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1016/j.aei.2026.104421" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q1</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Advanced Engineering Informatics, 72, 104421, 2026
-        </div>
-        <a href="https://doi.org/10.1016/j.aei.2026.104421" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q1</span>
       </div>
 
-      <div class="pub">
-        <div class="pub-title">
-          Generative AI-driven data augmentation and object-guided vision-language reasoning for PPE compliance analysis in work-at-height
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/aei2026-ppe-vlm.png" alt="PPE compliance vision-language reasoning paper">
         </div>
-        <div class="pub-authors">
-          <strong>Wenyu Xu</strong>, Wen Yi, Yi Tan
+        <div class="pub-content">
+          <div class="pub-title">
+            Generative AI-driven data augmentation and object-guided vision-language reasoning for PPE compliance analysis in work-at-height
+          </div>
+          <div class="pub-authors">
+            <strong>Wenyu Xu</strong>, Wen Yi, Yi Tan
+          </div>
+          <div class="pub-venue">
+            Advanced Engineering Informatics, 71, 104364, 2026
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1016/j.aei.2026.104364" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q1</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Advanced Engineering Informatics, 71, 104364, 2026
-        </div>
-        <a href="https://doi.org/10.1016/j.aei.2026.104364" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q1</span>
       </div>
 
-      <div class="pub">
-        <div class="pub-title">
-          Regulation-aligned PPE compliance assessment for work-at-height using visual relationships and scene graph reasoning
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/aei2026-scene-graph.png" alt="PPE compliance scene graph reasoning paper">
         </div>
-        <div class="pub-authors">
-          Wen Yi, <strong>Wenyu Xu*</strong>, Yi Tan
+        <div class="pub-content">
+          <div class="pub-title">
+            Regulation-aligned PPE compliance assessment for work-at-height using visual relationships and scene graph reasoning
+          </div>
+          <div class="pub-authors">
+            Wen Yi, <strong>Wenyu Xu*</strong>, Yi Tan
+          </div>
+          <div class="pub-venue">
+            Advanced Engineering Informatics, 74, 104612, 2026
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1016/j.aei.2026.104612" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q1</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Advanced Engineering Informatics, 74, 104612, 2026
-        </div>
-        <a href="https://doi.org/10.1016/j.aei.2026.104612" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q1</span>
       </div>
 
-      <div class="pub">
-        <div class="pub-title">
-          Building defect inspection and data management using computer vision, augmented reality, and BIM technology
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/autcon2024-defect-ar-bim.png" alt="Building defect inspection using CV AR and BIM">
         </div>
-        <div class="pub-authors">
-          Yi Tan, <strong>Wenyu Xu</strong>, Penglu Chen, Shuyan Zhang
+        <div class="pub-content">
+          <div class="pub-title">
+            Building defect inspection and data management using computer vision, augmented reality, and BIM technology
+          </div>
+          <div class="pub-authors">
+            Yi Tan, <strong>Wenyu Xu</strong>, Penglu Chen, Shuyan Zhang
+          </div>
+          <div class="pub-venue">
+            Automation in Construction, 160, 105318, 2024
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1016/j.autcon.2024.105318" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q1</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Automation in Construction, 160, 105318, 2024
-        </div>
-        <a href="https://doi.org/10.1016/j.autcon.2024.105318" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q1</span>
       </div>
 
-      <div class="pub">
-        <div class="pub-title">
-          An interactive and collaborative augmented reality environment for civil engineering education: steel reinforcement bars teaching as an example
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/ecam2024-ar-education.png" alt="AR environment for civil engineering education">
         </div>
-        <div class="pub-authors">
-          Yi Tan, <strong>Wenyu Xu</strong>, Keyu Chen, Chunyan Deng, Peng Wang
+        <div class="pub-content">
+          <div class="pub-title">
+            An interactive and collaborative augmented reality environment for civil engineering education: steel reinforcement bars teaching as an example
+          </div>
+          <div class="pub-authors">
+            Yi Tan, <strong>Wenyu Xu</strong>, Keyu Chen, Chunyan Deng, Peng Wang
+          </div>
+          <div class="pub-venue">
+            Engineering, Construction and Architectural Management, 31(3), 1100–1122, 2024
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.1108/ECAM-06-2022-0557" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q1</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Engineering, Construction and Architectural Management, 31(3), 1100–1122, 2024
-        </div>
-        <a href="https://doi.org/10.1108/ECAM-06-2022-0557" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q1</span>
       </div>
 
-      <div class="pub">
-        <div class="pub-title">
-          Augmented and virtual reality for education and training in the AEC industry: A systematic review of research and applications
+      <div class="pub-card">
+        <div class="pub-img-wrap">
+          <img src="assets/img/publications/buildings2022-ar-vr-review.png" alt="AR VR review in AEC industry">
         </div>
-        <div class="pub-authors">
-          Yi Tan, <strong>Wenyu Xu</strong>, Shenghan Li, Keyu Chen
+        <div class="pub-content">
+          <div class="pub-title">
+            Augmented and virtual reality for education and training in the AEC industry: A systematic review of research and applications
+          </div>
+          <div class="pub-authors">
+            Yi Tan, <strong>Wenyu Xu</strong>, Shenghan Li, Keyu Chen
+          </div>
+          <div class="pub-venue">
+            Buildings, 12(10), 1529, 2022
+          </div>
+          <div class="pub-links">
+            <a class="pub-link" href="https://doi.org/10.3390/buildings12101529" target="_blank">paper</a>
+            <span class="pub-note">SCI · JCR Q2</span>
+          </div>
         </div>
-        <div class="pub-venue">
-          Buildings, 12(10), 1529, 2022
-        </div>
-        <a href="https://doi.org/10.3390/buildings12101529" target="_blank">DOI</a>
-        <span class="pub-note">SCI · JCR Q2</span>
       </div>
 
       <div class="pub">
